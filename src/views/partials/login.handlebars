@@ -1,0 +1,24 @@
+{{#if error}}
+<p class="col-md-6"> {{error}}</p>
+{{/if}}
+<div class="row">
+    <form id="form" action="login" method="post" class="col-md-8">
+        <div class="form-group">
+            <label for="email" class="form-label">Ingrese email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese EMAIL" required>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password"
+                placeholder="Ingrese su contraseña" required>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary col-6">Iniciar Sesion</button>
+            </div>
+            <div class="col-6">
+                <a href="/register" class="btn btn-primary col-6"> Registrarse</a>
+            </div>
+        </div>
+    </form>
+</div>

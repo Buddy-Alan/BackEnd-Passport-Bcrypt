@@ -1,0 +1,28 @@
+{{#if error}}
+<p class="col-md-8"> {{error}}, podria probar con <a href="/login">inicar Sesion<a></p>
+{{/if}}
+<div class="row">
+    <form id="form" action="register" method="post" class="col-md-8">
+        <div class="form-group ">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Ingrese email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrece EMAIL" required>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password"
+                placeholder="Ingrese su contraseña" required>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary ">Registrarse</button>
+            </div>
+            <div class="col-6">
+                <a href="/login" class="btn btn-primary"> Iniciar Sesion </a>
+            </div>
+        </div>
+    </form>
+</div>

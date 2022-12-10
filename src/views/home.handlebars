@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>HOME</h1>
+    {{#if haySesion}}
+    <div class="row">
+
+        <h1 class="col-10">Bienvenido: {{nombre}}</h1>
+        <div class="col-2">
+            <button type="submit" id="cerrarSesion" class="btn btn-primary" onclick="cerrarSesion()">Cerrar
+                Sesion</button>
+        </div>
+    </div>
+</div>
+{{!-- {{> form}} --}}
+{{> tablaProductos}}
+<h1>Chat Web</h1>
+<input type="text" id="inputMensajes">
+<div id="messageContainer"></div>
+
+{{else}}
+<p>para ver los productos, por favor <a href="/login"> Inicie Sesion </a> o <a href="/register"> Registrese </a></p>
+{{/if}}
+</div>
+
+<script>
+    const cerrarSesion = () => {
+        fetch("/logout", {
+            method: "POST"
+        }).then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
+        urlActual = window.location
+        window.location.href = `${urlActual}logout`
+    }
+
+</script>
